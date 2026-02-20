@@ -35,5 +35,5 @@ pip install -r requirements.txt
 ```
 
 
-# Knihovna Babilon
+# Knihovna Babylon
 Inspirováno stejnojmeným dílem. Tento projekt by se snažil docílit stejného fenoménu, který toto dílo nabízí v podobě "nekončící" knihovny, která by se dala wolně procházet a v níž by mohl uživatel luštit komplexní slova a jejich význam. Premise je taková, že každá místnost v této knihovně má tisíce knih se stovkami stránek. Každá stránka obsahuje kolem 25 náhodných znaků. Kvůli velikosti této knihovny se ovšem dá najít význam všeho, co je někde jinde uvedeno...
