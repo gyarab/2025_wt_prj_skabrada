@@ -35,5 +35,13 @@ pip install -r requirements.txt
 ```
 
 
-# Knihovna Babylon
-Inspirováno stejnojmeným dílem. Tento projekt by se snažil docílit stejného fenoménu, který toto dílo nabízí v podobě "nekončící" knihovny, která by se dala wolně procházet a v níž by mohl uživatel luštit komplexní slova a jejich význam. Premise je taková, že každá místnost v této knihovně má tisíce knih se stovkami stránek. Každá stránka obsahuje kolem 25 náhodných znaků. Kvůli velikosti této knihovny se ovšem dá najít význam všeho, co je někde jinde uvedeno...
+# Doomsday clock
+## článek odbornářů
+Nápad na vedení databáze inspirované na základě stejnojmeného, už existujícího, projektu. Toto je ovšem zkušební projekt na design stránky a na další příležitostní zkušenosti, které se díky tomudle vyskytnou. Navíc by bylo fajn skusit nějakou zjednosušenou verzi, protože originí je dosti (za mne) chaotická při prvním otevření a hodně lidí by to odtáhlo.
+Představuji si jednoduché zavedení pouze pozorovatele a editora. Lepe řečeno jakýkoliv uživatel by mohl přidat jakoukoliv informaci vázající se k tématu, kde by uvedl svůj článek s jeho zdroji, a to by se přidalo. Pokud by tyto informace byly sporné, tak by mohl jakýkoliv uživatel tnto článek nahlásit a to by se poslalo do veřejného hlasování, kte můžou volit všichni aktivní uživatelé po nějakou dobu, po které by se článek vymazal, nebo zůstal v databázi.
+Co se týče samotné databáze, tak bych rád uvedlo; o co se jedná (doom clock), jednotlivé články podle časové osy, externí zdroje, rekordy a například i vyhledávání keywords... Především by jsem se soustředil na vyzuální stránku a přehlednost projektu. Jedna z těch přehledností také bude, že na této stránce nebudou vyskakovat žádné reklamy, což beru jako velké plus.
+
+## User and his flow
+
+## Wires acros frames
+
