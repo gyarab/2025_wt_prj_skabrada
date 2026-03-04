@@ -42,9 +42,9 @@ Představuji si jednoduché zavedení pouze pozorovatele a editora. Lepe řečen
 Co se týče samotné databáze, tak bych rád uvedlo; o co se jedná (doom clock), jednotlivé články podle časové osy, externí zdroje, rekordy a například i vyhledávání keywords... Především by jsem se soustředil na vyzuální stránku a přehlednost projektu. Jedna z těch přehledností také bude, že na této stránce nebudou vyskakovat žádné reklamy, což beru jako velké plus.
 
 ## User and his flow
-![userflow](userflow.png)
+![userflow](foto/userflow.png)
 
 ## Wires acros frames
-![wireframe](wireframe.png)
-![wireframe](wireframe2.png)
+![wireframe](foto/wireframe.png)
+![wireframe](foto/wireframe2.png)
 
