@@ -41,6 +41,8 @@ Nápad na vedení databáze inspirované na základě stejnojmeného, už existu
 Představuji si jednoduché zavedení pouze pozorovatele a editora. Lepe řečeno jakýkoliv uživatel by mohl přidat jakoukoliv informaci vázající se k tématu, kde by uvedl svůj článek s jeho zdroji, a to by se přidalo. Pokud by tyto informace byly sporné, tak by mohl jakýkoliv uživatel tnto článek nahlásit a to by se poslalo do veřejného hlasování, kte můžou volit všichni aktivní uživatelé po nějakou dobu, po které by se článek vymazal, nebo zůstal v databázi.
 Co se týče samotné databáze, tak bych rád uvedlo; o co se jedná (doom clock), jednotlivé články podle časové osy, externí zdroje, rekordy a například i vyhledávání keywords... Především by jsem se soustředil na vyzuální stránku a přehlednost projektu. Jedna z těch přehledností také bude, že na této stránce nebudou vyskakovat žádné reklamy, což beru jako velké plus.
 
+ps: O víkendu proběhne komplet předělání na základě mého rozhodnutí o zvolení jiného tématu (zase).
+
 ## User and his flow
 ![userflow](foto/userflow.png)
 
@@ -48,3 +50,5 @@ Co se týče samotné databáze, tak bych rád uvedlo; o co se jedná (doom cloc
 ![wireframe](foto/wireframe.png)
 ![wireframe](foto/wireframe2.png)
 
+## DB - schéma
+![DB-schema](foto/DB-schema.png.png)
