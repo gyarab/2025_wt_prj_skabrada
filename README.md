@@ -81,9 +81,11 @@ přihlášený uživatel bude mt k dispozity veškeré nástroje zmínené výš
 Admin jako takyvý bude moci měnit *prmanetní* informace na stránce (změna/přidání/ubrání popisků, informací, barev, palet).
 
 ## Userflow
-
+![userflow](foto/userflow.png)
 
 ## Wireframe
-
+![userflow](foto/wireframe1.png)
+![userflow](foto/wireframe2.png)
 
 ## DB-Schéma
+![userflow](foto/DB-diagram.png)
