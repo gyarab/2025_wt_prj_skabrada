@@ -11,7 +11,7 @@ Aplikace používá Python Virtual Environment, před spuštěním je potřeba v
 python3 -m venv venv
 
 # Windows
-python -m venv venv
+py -3 -m venv venv
 ```
 
 Dále je třeba venv aktivovat:
@@ -21,10 +21,7 @@ Dále je třeba venv aktivovat:
 source ./venv/bin/activate
 
 # Windows - Bash
-source venv/Scripts/activate
-
-# Windows - Power shell
-.\venv\Scripts\activate
+source ./venv/Scripts/activate
 ```
 
 Je třeba ujistit se, že jsou nainstalovány všechny závislosti:
@@ -34,21 +31,59 @@ Je třeba ujistit se, že jsou nainstalovány všechny závislosti:
 pip install -r requirements.txt
 ```
 
+Spustit lokalni server
 
-# Doomsday clock
-## článek odbornářů
-Nápad na vedení databáze inspirované na základě stejnojmeného, už existujícího, projektu. Toto je ovšem zkušební projekt na design stránky a na další příležitostní zkušenosti, které se díky tomudle vyskytnou. Navíc by bylo fajn skusit nějakou zjednosušenou verzi, protože originí je dosti (za mne) chaotická při prvním otevření a hodně lidí by to odtáhlo.
-Představuji si jednoduché zavedení pouze pozorovatele a editora. Lepe řečeno jakýkoliv uživatel by mohl přidat jakoukoliv informaci vázající se k tématu, kde by uvedl svůj článek s jeho zdroji, a to by se přidalo. Pokud by tyto informace byly sporné, tak by mohl jakýkoliv uživatel tnto článek nahlásit a to by se poslalo do veřejného hlasování, kte můžou volit všichni aktivní uživatelé po nějakou dobu, po které by se článek vymazal, nebo zůstal v databázi.
-Co se týče samotné databáze, tak bych rád uvedlo; o co se jedná (doom clock), jednotlivé články podle časové osy, externí zdroje, rekordy a například i vyhledávání keywords... Především by jsem se soustředil na vyzuální stránku a přehlednost projektu. Jedna z těch přehledností také bude, že na této stránce nebudou vyskakovat žádné reklamy, což beru jako velké plus.
+```bash
+cd prj
+./manage.py runserver
+```
 
-ps: O víkendu proběhne komplet předělání na základě mého rozhodnutí o zvolení jiného tématu (zase).
+Pokud pouštíme projekt poprvé, je třeba inicializovat DB pomocí
 
-## User and his flow
-![userflow](foto/userflow.png)
+```bash
+./manage.py migrate
+```
 
-## Wires acros frames
-![wireframe](foto/wireframe.png)
-![wireframe](foto/wireframe2.png)
+Pokud je DB prázdná a chceme mít přístup do Django administrace, vytvoříme si uživatele pomocí
 
-## DB - schéma
-![DB-schema](foto/DB-schema.png.png)
+```bash
+./manage.py createsuperuser
+```
+
+Doporučuji použít username `admin` a heslo `admin`, bez e-mailu.
+
+## Změna `models.py`
+
+Po kazde zmene v models.py je treba pustit skript, ktery vygeneruje zmenu struktury DB.
+
+```bash
+./manage.py makemigrations
+```
+
+Pote zmenu DB aplikovat na aktualni zivou DB
+
+```bash
+./manage.py migrate
+```
+
+# Color scheme
+## Odborný článek
+Jedná se o webovou databázi, která zaznamenává palety barev, samotných barev a jejich respektivní detaily. Hlavní gimika tohoto programu by blo, že každý den tento program nabídne novou/jinou **paletu dne**, kterou může uživatel použít na svou práci. Z toho vyplívá, že uživatel bude schopen nahrát fotografii s tímto dílem k dané paletě. Pokud tedy přiloží svoji práci tak poté (po skončení lhůty) se daná paleta i s fotografií uloží do "**galerie**". Dále bude uživatel schopen si danou paletu *bookmarknou* a ta se uloží do složky **oblíbená**. Další částí by byla možnost jít do poddatabáze, kte by byly sepsané různé informace samotné barvy (např: odborné jméno, hex, extra informace), které by se čerpali z extarních zdrojů. Uživatel bude moci připisovat sám do těchto informací. Všechny části ohledně samotného přizpůsobování uživatele budou zamčené za přihlášením uživatele, tudíž se jedná o osobní zápisy.
+Nabízí se tedy i možnost pro nepřihlášeného uživatele v podobě pouhé palety dne, ale pokud by uživatel zvažoval dělat více, tak by se musel zaregistrovat nobo jednoduše připojit na svůj účet.
+
+### nepřihlášný uživatel
+Buď by nepřihlášený uivatel pouze mohl vidět paletu dne, a nebo by se jednalo o aplikaci, kde je nutné se přihlásit.
+
+### přihlášený uživatel
+přihlášený uživatel bude mt k dispozity veškeré nástroje zmínené výše v odborném članku.
+
+### admin
+Admin jako takyvý bude moci měnit *prmanetní* informace na stránce (změna/přidání/ubrání popisků, informací, barev, palet).
+
+## Userflow
+
+
+## Wireframe
+
+
+## DB-Schéma
