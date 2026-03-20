@@ -1,13 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-class Book(models.Model):
+class Palete(models.Model):
     # id
-    title = models.CharField(MAX_lenght=255)
-    year = models.PositiveSmallIntegerField(blank=True, null=True)
-    rating = models.PositiveSmallIntegerField(blank=True, null=True)
-    writter = models.ForeignKey('Writter', on_delete=models.SET_NULL, null=True)
+    Name = models.CharField(max_lenght=255)
+    CNumber_Of_Colors = models.PositiveSmallIntegerField(blank=True, null=True)
+    Added_To_System = models.PositiveSmallIntegerField(blank=True, null=True)
+    Added_To_Favourites = models.PositiveSmallIntegerField(blank=True, null=True)
+    Favourited = models.PositiveSmallIntegerField(blank=True, null=True)
+    Viewed = models.BooleanField()
 
-class Writter(models.Model):
-    # id
-    Name = models.CharField(MAX_lenght=255)
-    country = models.PositiveSmallIntegerField(blank=True, null=True)
+    def __str__(self):
+        return self.Name
