@@ -1,14 +1,12 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 class Palete(models.Model):
-    # id
-    Name = models.CharField(max_lenght=255)
-    CNumber_Of_Colors = models.PositiveSmallIntegerField(blank=True, null=True)
-    Added_To_System = models.PositiveSmallIntegerField(blank=True, null=True)
-    Added_To_Favourites = models.PositiveSmallIntegerField(blank=True, null=True)
-    Favourited = models.PositiveSmallIntegerField(blank=True, null=True)
-    Viewed = models.BooleanField()
+    name = models.CharField(max_length=255)
+    number_of_colors = models.PositiveSmallIntegerField(blank=True, null=True)  # snake_case
+    added_to_system = models.DateTimeField(auto_now_add=True)
+    added_to_favourites = models.DateTimeField(auto_now_add=True)
+    favourited = models.DateTimeField(auto_now_add=True)
+    viewed = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.Name
+        return self.name
