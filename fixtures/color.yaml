@@ -1,0 +1,18 @@
+- model: app.color
+  pk: 1
+  fields:
+    name: Red
+    hex_id: '#FF0000'
+    info_misc: Roses are red
+- model: app.color
+  pk: 2
+  fields:
+    name: Green
+    hex_id: '#00FF00'
+    info_misc: Toxic plant
+- model: app.color
+  pk: 3
+  fields:
+    name: Blue
+    hex_id: '0000FF#'
+    info_misc: Sky

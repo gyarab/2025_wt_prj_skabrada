@@ -1,0 +1,45 @@
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$1200000$VK7knUrsBE27kfPcxz54LA$6S6od6/AUoUpTQv0WXZMxA7CHnyphcPYQYXFIKE7Pqo=
+    last_login: null
+    is_superuser: true
+    username: simon.skabrada.s
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2026-03-27 08:06:22.015636+00:00
+    groups: []
+    user_permissions: []
+- model: auth.user
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$1200000$QClQJy2sOEiJQkDXR2C6Uy$Kkjvq4yd71P2gDnRMNzFzcKCzJssPiDJCuylresF3Ek=
+    last_login: 2026-03-27 08:09:22.278115+00:00
+    is_superuser: true
+    username: simon
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2026-03-27 08:09:03.098067+00:00
+    groups: []
+    user_permissions: []
+- model: auth.user
+  pk: 3
+  fields:
+    password: pbkdf2_sha256$1200000$RDZ13MterjVEw2IACCtz8a$Di0+w0FxWjBJ76aZI5SygciS3MqiEl5TN11Gzr7hwbo=
+    last_login: null
+    is_superuser: true
+    username: admin
+    first_name: ''
+    last_name: ''
+    email: ''
+    is_staff: true
+    is_active: true
+    date_joined: 2026-03-27 08:55:15.486783+00:00
+    groups: []
+    user_permissions: []

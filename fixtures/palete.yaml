@@ -1,0 +1,11 @@
+- model: app.palete
+  pk: 1
+  fields:
+    name: RGB
+    number_of_colors: 3
+    added_to_system: 2026-03-27 08:23:22.142826+00:00
+    added_to_favourites: 2026-03-27 08:23:22.142838+00:00
+    favourited: 2026-03-27 08:23:22.142843+00:00
+    viewed: false
+    colors:
+    - 1
