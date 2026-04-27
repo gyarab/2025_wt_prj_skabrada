@@ -10,4 +10,4 @@ class PaleteAdmin(admin.ModelAdmin):
 @admin.register(Color)
 class ColorAdmin(admin.ModelAdmin):
     list_display = ("name", "hex_id")
-    filter = ("colors")
+    search_fields = ("name", "hey_id")
