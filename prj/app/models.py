@@ -9,15 +9,21 @@ class Color(models.Model):
     def __str__(self):
         return f"{self.name} ({self.hex_id})"
 
-class Palete(models.Model):
+
+class Palette(models.Model):
     name = models.CharField(max_length=255)
-    number_of_colors = models.PositiveSmallIntegerField(blank=True, null=True)
-    added_to_system = models.DateTimeField(auto_now_add=True)
-    added_to_favourites = models.DateTimeField(auto_now_add=True)
-    favourited = models.DateTimeField(auto_now_add=True)
+
+    description = models.TextField(blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
     viewed = models.BooleanField(default=False)
 
-    colors = models.ManyToManyField(Color, blank=True) 
+    views_count = models.PositiveIntegerField(default=0)
+
+    is_favourite = models.BooleanField(default=False)
+
+    colors = models.ManyToManyField(Color, blank=True)
 
     def __str__(self):
         return self.name
