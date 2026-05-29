@@ -1,23 +1,24 @@
 from django.contrib import admin
-from .models import Palete, Color
+from .models import Palette, Color
 
 
-@admin.register(Palete)
+@admin.register(Palette)
 class PaleteAdmin(admin.ModelAdmin):
 
     list_display = (
         "name",
         "number_of_colors",
-        "favourited",
-        "viewed"
+        "viewed",
     )
 
     list_filter = (
         "viewed",
-        "favourited"
     )
 
     search_fields = ("name",)
+
+    def number_of_colors(self, obj):
+        return obj.colors.count()
 
 
 @admin.register(Color)
